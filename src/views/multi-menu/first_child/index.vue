@@ -29,6 +29,7 @@ function renderLabel(option: SelectOption): VNodeChild {
 
 <template>
   <div>
+    value-field不能和render-label同时使用的示例代码：
     {{ formState.orgId }}
     <NSelect
       v-model:value="formState.orgId"
@@ -38,6 +39,7 @@ function renderLabel(option: SelectOption): VNodeChild {
     />
 
     <hr />
+    单独使用 render-label 没问题：
     {{ formState2.orgId }}
     <NSelect v-model:value="formState2.orgId" :options="formState2.orgList" :render-label="renderLabel" />
   </div>
